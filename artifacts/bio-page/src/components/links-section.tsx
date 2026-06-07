@@ -1,15 +1,39 @@
 import siteConfig from "@/content/site-config";
 
 function LinkCard({ card, index }: { card: typeof siteConfig.links.items[0]; index: number }) {
+  const bg = card.backgroundColor ?? "var(--theme-bg)";
+  const text = card.textColor ?? "var(--theme-fg)";
+  const border = card.borderColor ?? "var(--theme-border)";
+  const radius = card.radius ?? "var(--theme-card-radius)";
+
+  const style: React.CSSProperties = {
+    backgroundColor: bg,
+    color: text,
+    borderColor: border,
+    borderRadius: radius,
+    borderWidth: "1px",
+    borderStyle: "solid",
+  };
+
   return (
     <a
       data-testid={`link-card-${index + 1}`}
       href={card.url}
-      className="group block border border-border bg-card p-4 hover:border-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-      style={{ borderRadius: "var(--theme-card-radius)", "--tw-ring-color": "var(--theme-primary)" } as React.CSSProperties}
+      className="group block p-4 hover:opacity-90 focus-visible:outline-none"
+      style={style}
     >
-      <p className="text-sm font-medium text-foreground mb-1">{card.title}</p>
-      <p className="text-xs text-muted-foreground">{card.description}</p>
+      <div className="flex items-center gap-3 mb-1">
+        {card.icon && (
+          <span
+            className="inline-flex items-center justify-center w-6 h-6 text-[10px] font-bold rounded"
+            style={{ backgroundColor: border, color: text }}
+          >
+            {card.icon}
+          </span>
+        )}
+        <p className="text-sm font-medium">{card.title}</p>
+      </div>
+      <p className="text-xs opacity-60">{card.description}</p>
     </a>
   );
 }

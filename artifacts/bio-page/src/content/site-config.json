@@ -13,17 +13,32 @@
       {
         "title": "GitHub",
         "description": "My open source projects",
-        "url": "#"
+        "url": "#",
+        "backgroundColor": "#111827",
+        "textColor": "#f3f4f6",
+        "borderColor": "#374151",
+        "radius": "0.5rem",
+        "icon": "GH"
       },
       {
         "title": "Twitter / X",
         "description": "Thoughts and updates",
-        "url": "#"
+        "url": "#",
+        "backgroundColor": "#0f172a",
+        "textColor": "#e2e8f0",
+        "borderColor": "#1e293b",
+        "radius": "0.75rem",
+        "icon": "X"
       },
       {
         "title": "LinkedIn",
         "description": "Professional profile",
-        "url": "#"
+        "url": "#",
+        "backgroundColor": "#0c2d4d",
+        "textColor": "#bfdbfe",
+        "borderColor": "#1e3a5f",
+        "radius": "1rem",
+        "icon": "in"
       },
       {
         "title": "Blog",

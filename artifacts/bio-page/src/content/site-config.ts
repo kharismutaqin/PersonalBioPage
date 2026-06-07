@@ -4,6 +4,11 @@ export interface LinkItem {
   title: string;
   description: string;
   url: string;
+  backgroundColor?: string;
+  textColor?: string;
+  borderColor?: string;
+  radius?: string;
+  icon?: string;
 }
 
 export interface Profile {

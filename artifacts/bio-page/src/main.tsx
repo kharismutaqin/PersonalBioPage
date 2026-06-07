@@ -7,6 +7,8 @@ document.documentElement.classList.add("dark");
 
 const { theme } = siteConfig;
 document.documentElement.style.setProperty("--theme-bg", theme.backgroundColor);
+document.documentElement.style.setProperty("--theme-fg", "#e2e8f0");
+document.documentElement.style.setProperty("--theme-border", "#2a2a3c");
 document.documentElement.style.setProperty("--theme-primary", theme.primaryColor);
 document.documentElement.style.setProperty("--theme-card-radius", theme.cardRadius);
 
