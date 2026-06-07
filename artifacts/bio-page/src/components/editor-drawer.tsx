@@ -29,16 +29,18 @@ export default function EditorDrawer() {
     <Sheet open={isEditMode} onOpenChange={setEditMode}>
       <SheetContent
         side="right"
-        className="w-full sm:w-[400px]"
+        className="w-full sm:w-[400px] flex flex-col h-full p-0"
         data-testid="editor-drawer"
       >
-        <SheetHeader>
-          <SheetTitle>Customize</SheetTitle>
-          <SheetDescription>
-            Edit your bio page content and appearance.
-          </SheetDescription>
-        </SheetHeader>
-        <div className="mt-4 space-y-1">
+        <div className="shrink-0 p-6 pb-4">
+          <SheetHeader>
+            <SheetTitle>Customize</SheetTitle>
+            <SheetDescription>
+              Edit your bio page content and appearance.
+            </SheetDescription>
+          </SheetHeader>
+        </div>
+        <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-1">
           <EditorGroup title="Profile">
             <ProfileEditor />
           </EditorGroup>
