@@ -1,5 +1,10 @@
 import rawConfig from "./site-config.json";
 
+export interface LinkItemSize {
+  colSpan: number;
+  rowSpan: number;
+}
+
 export interface LinkItem {
   title: string;
   description: string;
@@ -12,6 +17,7 @@ export interface LinkItem {
     type: "auto" | "url" | "file";
     value?: string;
   };
+  size?: LinkItemSize;
 }
 
 export interface Profile {
@@ -25,6 +31,7 @@ export interface Profile {
 
 export interface Links {
   sectionTitle: string;
+  gridColumns: number;
   items: LinkItem[];
 }
 

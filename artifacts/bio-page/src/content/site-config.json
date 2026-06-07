@@ -9,6 +9,7 @@
   },
   "links": {
     "sectionTitle": "Links",
+    "gridColumns": 3,
     "items": [
       {
         "title": "GitHub",
@@ -18,7 +19,8 @@
         "textColor": "#f3f4f6",
         "borderColor": "#374151",
         "radius": "0.5rem",
-        "icon": { "type": "file", "value": "/icons/demo.svg" }
+        "icon": { "type": "file", "value": "/icons/demo.svg" },
+        "size": { "colSpan": 2, "rowSpan": 1 }
       },
       {
         "title": "Twitter / X",
@@ -28,7 +30,8 @@
         "textColor": "#e2e8f0",
         "borderColor": "#1e293b",
         "radius": "0.75rem",
-        "icon": { "type": "auto" }
+        "icon": { "type": "auto" },
+        "size": { "colSpan": 1, "rowSpan": 1 }
       },
       {
         "title": "LinkedIn",
@@ -38,23 +41,27 @@
         "textColor": "#bfdbfe",
         "borderColor": "#1e3a5f",
         "radius": "1rem",
-        "icon": { "type": "auto" }
+        "icon": { "type": "auto" },
+        "size": { "colSpan": 2, "rowSpan": 2 }
       },
       {
         "title": "Blog",
         "description": "Long-form writing",
-        "url": "#"
+        "url": "#",
+        "size": { "colSpan": 1, "rowSpan": 1 }
       },
       {
         "title": "Portfolio",
         "description": "Selected work",
-        "url": "#"
+        "url": "#",
+        "size": { "colSpan": 3, "rowSpan": 1 }
       },
       {
         "title": "Email",
         "description": "Get in touch",
         "url": "mailto:hello@example.com",
-        "icon": { "type": "auto" }
+        "icon": { "type": "auto" },
+        "size": { "colSpan": 1, "rowSpan": 1 }
       }
     ]
   },

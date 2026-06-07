@@ -1,5 +1,5 @@
 import Hero from "@/components/hero";
-import LinksSection from "@/components/links-section";
+import BentoLinks from "@/components/bento-links";
 import NowSection from "@/components/now-section";
 import Footer from "@/components/footer";
 
@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="min-h-screen" style={{ backgroundColor: "var(--theme-bg)" }}>
       <main className="mx-auto w-full max-w-2xl px-4 sm:px-6">
         <Hero />
-        <LinksSection />
+        <BentoLinks />
         <NowSection />
       </main>
       <div className="mx-auto w-full max-w-2xl px-4 sm:px-6">
