@@ -18,45 +18,43 @@
         "textColor": "#f3f4f6",
         "borderColor": "#374151",
         "radius": "0.5rem",
-        "icon": "github"
+        "icon": { "type": "file", "value": "/icons/demo.svg" }
       },
       {
         "title": "Twitter / X",
         "description": "Thoughts and updates",
-        "url": "#",
+        "url": "https://x.com",
         "backgroundColor": "#0f172a",
         "textColor": "#e2e8f0",
         "borderColor": "#1e293b",
         "radius": "0.75rem",
-        "icon": "x"
+        "icon": { "type": "auto" }
       },
       {
         "title": "LinkedIn",
         "description": "Professional profile",
-        "url": "#",
+        "url": "https://linkedin.com",
         "backgroundColor": "#0c2d4d",
         "textColor": "#bfdbfe",
         "borderColor": "#1e3a5f",
         "radius": "1rem",
-        "icon": "linkedin"
+        "icon": { "type": "auto" }
       },
       {
         "title": "Blog",
         "description": "Long-form writing",
-        "url": "#",
-        "icon": "website"
+        "url": "#"
       },
       {
         "title": "Portfolio",
         "description": "Selected work",
-        "url": "#",
-        "icon": "website"
+        "url": "#"
       },
       {
         "title": "Email",
         "description": "Get in touch",
-        "url": "#",
-        "icon": "email"
+        "url": "mailto:hello@example.com",
+        "icon": { "type": "auto" }
       }
     ]
   },

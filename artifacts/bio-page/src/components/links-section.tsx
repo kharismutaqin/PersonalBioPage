@@ -1,12 +1,11 @@
 import siteConfig from "@/content/site-config";
-import { getIcon } from "@/components/icons";
+import { IconSource } from "@/components/icon-source";
 
 function LinkCard({ card, index }: { card: typeof siteConfig.links.items[0]; index: number }) {
   const bg = card.backgroundColor ?? "var(--theme-bg)";
   const text = card.textColor ?? "var(--theme-fg)";
   const border = card.borderColor ?? "var(--theme-border)";
   const radius = card.radius ?? "var(--theme-card-radius)";
-  const icon = getIcon(card.icon);
 
   const style: React.CSSProperties = {
     backgroundColor: bg,
@@ -25,14 +24,7 @@ function LinkCard({ card, index }: { card: typeof siteConfig.links.items[0]; ind
       style={style}
     >
       <div className="flex items-center gap-3 mb-1">
-        {icon && (
-          <span
-            className="inline-flex items-center justify-center w-6 h-6 rounded"
-            style={{ color: text }}
-          >
-            {icon}
-          </span>
-        )}
+        <IconSource icon={card.icon} url={card.url} color={text} />
         <p className="text-sm font-medium">{card.title}</p>
       </div>
       <p className="text-xs opacity-60">{card.description}</p>

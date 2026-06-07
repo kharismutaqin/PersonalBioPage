@@ -8,7 +8,10 @@ export interface LinkItem {
   textColor?: string;
   borderColor?: string;
   radius?: string;
-  icon?: string;
+  icon?: {
+    type: "auto" | "url" | "file";
+    value?: string;
+  };
 }
 
 export interface Profile {
