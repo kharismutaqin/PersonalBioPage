@@ -18,7 +18,7 @@
         "textColor": "#f3f4f6",
         "borderColor": "#374151",
         "radius": "0.5rem",
-        "icon": "GH"
+        "icon": "github"
       },
       {
         "title": "Twitter / X",
@@ -28,7 +28,7 @@
         "textColor": "#e2e8f0",
         "borderColor": "#1e293b",
         "radius": "0.75rem",
-        "icon": "X"
+        "icon": "x"
       },
       {
         "title": "LinkedIn",
@@ -38,22 +38,25 @@
         "textColor": "#bfdbfe",
         "borderColor": "#1e3a5f",
         "radius": "1rem",
-        "icon": "in"
+        "icon": "linkedin"
       },
       {
         "title": "Blog",
         "description": "Long-form writing",
-        "url": "#"
+        "url": "#",
+        "icon": "website"
       },
       {
         "title": "Portfolio",
         "description": "Selected work",
-        "url": "#"
+        "url": "#",
+        "icon": "website"
       },
       {
         "title": "Email",
         "description": "Get in touch",
-        "url": "#"
+        "url": "#",
+        "icon": "email"
       }
     ]
   },
