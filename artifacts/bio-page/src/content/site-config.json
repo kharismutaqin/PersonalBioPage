@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "name": "Your Name",
+    "bio": "A short bio about yourself goes here. Describe what you do, what you care about, and what makes you interesting in a couple of sentences.",
+    "avatar": {
+      "type": "placeholder",
+      "placeholderText": "?"
+    }
+  },
+  "links": {
+    "sectionTitle": "Links",
+    "items": [
+      {
+        "title": "GitHub",
+        "description": "My open source projects",
+        "url": "#"
+      },
+      {
+        "title": "Twitter / X",
+        "description": "Thoughts and updates",
+        "url": "#"
+      },
+      {
+        "title": "LinkedIn",
+        "description": "Professional profile",
+        "url": "#"
+      },
+      {
+        "title": "Blog",
+        "description": "Long-form writing",
+        "url": "#"
+      },
+      {
+        "title": "Portfolio",
+        "description": "Selected work",
+        "url": "#"
+      },
+      {
+        "title": "Email",
+        "description": "Get in touch",
+        "url": "#"
+      }
+    ]
+  },
+  "now": {
+    "sectionTitle": "Now",
+    "currentlyBuilding": "Placeholder project description — what you are actively working on right now.",
+    "currentlyLearning": "Placeholder topic — a technology, framework, concept, or skill you are studying.",
+    "currentlyListening": "Placeholder artist or album — music, podcast, or anything audio you are enjoying."
+  },
+  "theme": {
+    "primaryColor": "#3b82f6",
+    "backgroundColor": "#0a0a0f",
+    "cardRadius": "0.625rem"
+  },
+  "footer": {
+    "copyrightName": "Your Name"
+  }
+}

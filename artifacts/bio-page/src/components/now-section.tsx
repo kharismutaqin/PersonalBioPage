@@ -1,22 +1,9 @@
+import siteConfig from "@/content/site-config";
+
 interface NowItem {
   label: string;
   value: string;
 }
-
-const NOW_ITEMS: NowItem[] = [
-  {
-    label: "Currently Building",
-    value: "Placeholder project description — what you are actively working on right now.",
-  },
-  {
-    label: "Currently Learning",
-    value: "Placeholder topic — a technology, framework, concept, or skill you are studying.",
-  },
-  {
-    label: "Currently Listening",
-    value: "Placeholder artist or album — music, podcast, or anything audio you are enjoying.",
-  },
-];
 
 function NowItem({ item }: { item: NowItem }) {
   return (
@@ -33,13 +20,21 @@ function NowItem({ item }: { item: NowItem }) {
 }
 
 export default function NowSection() {
+  const { now } = siteConfig;
+
+  const nowItems: NowItem[] = [
+    { label: "Currently Building", value: now.currentlyBuilding },
+    { label: "Currently Learning", value: now.currentlyLearning },
+    { label: "Currently Listening", value: now.currentlyListening },
+  ];
+
   return (
     <section data-testid="section-now" className="py-8">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
-        Now
+        {now.sectionTitle}
       </h2>
       <div className="rounded-lg border border-border bg-card divide-y divide-border overflow-hidden">
-        {NOW_ITEMS.map((item) => (
+        {nowItems.map((item) => (
           <div key={item.label} className="px-4">
             <NowItem item={item} />
           </div>
