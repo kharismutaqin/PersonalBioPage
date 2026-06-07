@@ -10,7 +10,10 @@ export default function Hero() {
         className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-secondary border-2 border-border flex items-center justify-center mb-6 shrink-0"
         aria-label="Avatar placeholder"
       >
-        <span className="text-4xl sm:text-5xl text-muted-foreground select-none">
+        <span
+          className="text-4xl sm:text-5xl select-none"
+          style={{ color: "var(--theme-primary)" }}
+        >
           {profile.avatar.placeholderText}
         </span>
       </div>

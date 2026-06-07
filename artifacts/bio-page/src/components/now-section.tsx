@@ -33,7 +33,10 @@ export default function NowSection() {
       <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
         {now.sectionTitle}
       </h2>
-      <div className="rounded-lg border border-border bg-card divide-y divide-border overflow-hidden">
+      <div
+        className="border border-border bg-card divide-y divide-border overflow-hidden"
+        style={{ borderRadius: "var(--theme-card-radius)" }}
+      >
         {nowItems.map((item) => (
           <div key={item.label} className="px-4">
             <NowItem item={item} />

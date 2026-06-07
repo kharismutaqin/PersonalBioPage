@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--theme-bg)" }}>
       <main className="mx-auto w-full max-w-2xl px-4 sm:px-6">
         <Hero />
         <LinksSection />
