@@ -5,6 +5,11 @@ export interface LinkItemSize {
   rowSpan: number;
 }
 
+export interface LinkItemPosition {
+  column: number;
+  row: number;
+}
+
 export interface LinkItem {
   title: string;
   description: string;
@@ -18,6 +23,7 @@ export interface LinkItem {
     value?: string;
   };
   size?: LinkItemSize;
+  position?: LinkItemPosition;
 }
 
 export interface Profile {

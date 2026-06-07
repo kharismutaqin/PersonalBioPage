@@ -20,7 +20,8 @@
         "borderColor": "#374151",
         "radius": "0.5rem",
         "icon": { "type": "file", "value": "/icons/demo.svg" },
-        "size": { "colSpan": 2, "rowSpan": 1 }
+        "size": { "colSpan": 2, "rowSpan": 1 },
+        "position": { "column": 1, "row": 1 }
       },
       {
         "title": "Twitter / X",
@@ -31,7 +32,8 @@
         "borderColor": "#1e293b",
         "radius": "0.75rem",
         "icon": { "type": "auto" },
-        "size": { "colSpan": 1, "rowSpan": 1 }
+        "size": { "colSpan": 1, "rowSpan": 1 },
+        "position": { "column": 3, "row": 1 }
       },
       {
         "title": "LinkedIn",
@@ -42,13 +44,14 @@
         "borderColor": "#1e3a5f",
         "radius": "1rem",
         "icon": { "type": "auto" },
-        "size": { "colSpan": 2, "rowSpan": 2 }
+        "size": { "colSpan": 1, "rowSpan": 2 },
+        "position": { "column": 3, "row": 2 }
       },
       {
         "title": "Blog",
         "description": "Long-form writing",
         "url": "#",
-        "size": { "colSpan": 1, "rowSpan": 1 }
+        "size": { "colSpan": 2, "rowSpan": 1 }
       },
       {
         "title": "Portfolio",
