@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useCallback } from "react";
-import siteConfig from "@/content/site-config";
+import siteConfig, { type LinkItem } from "@/content/site-config";
 
 export type AvatarMode = "none" | "url" | "upload";
 
@@ -17,6 +17,7 @@ export interface ProfileState {
 
 interface SiteState {
   profile: ProfileState;
+  links: LinkItem[];
 }
 
 interface SiteStateActions {
@@ -25,6 +26,11 @@ interface SiteStateActions {
   setAvatarMode: (mode: AvatarMode) => void;
   setAvatarUrl: (url: string) => void;
   setAvatarData: (data: string) => void;
+
+  updateLink: (index: number, patch: Partial<LinkItem>) => void;
+  addLink: () => void;
+  deleteLink: (index: number) => void;
+  duplicateLink: (index: number) => void;
 }
 
 type SiteStateContext = SiteState & SiteStateActions;
@@ -41,6 +47,8 @@ export function SiteStateProvider({ children }: { children: React.ReactNode }) {
       data: "",
     },
   });
+
+  const [links, setLinks] = useState<LinkItem[]>(siteConfig.links.items);
 
   const setProfileName = useCallback((name: string) => {
     setProfile((prev) => ({ ...prev, name }));
@@ -71,15 +79,53 @@ export function SiteStateProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  const updateLink = useCallback((index: number, patch: Partial<LinkItem>) => {
+    setLinks((prev) => {
+      const next = [...prev];
+      next[index] = { ...next[index], ...patch };
+      return next;
+    });
+  }, []);
+
+  const addLink = useCallback(() => {
+    setLinks((prev) => [
+      ...prev,
+      {
+        title: "New Link",
+        description: "",
+        url: "#",
+        icon: { type: "auto" },
+      },
+    ]);
+  }, []);
+
+  const deleteLink = useCallback((index: number) => {
+    setLinks((prev) => prev.filter((_, i) => i !== index));
+  }, []);
+
+  const duplicateLink = useCallback((index: number) => {
+    setLinks((prev) => {
+      const copy = { ...prev[index] };
+      const next = [...prev];
+      next.splice(index + 1, 0, copy);
+      return next;
+    });
+  }, []);
+
   return (
     <SiteStateContext.Provider
       value={{
         profile,
+        links,
         setProfileName,
         setProfileBio,
         setAvatarMode,
         setAvatarUrl,
         setAvatarData,
+        updateLink,
+        addLink,
+        deleteLink,
+        duplicateLink,
       }}
     >
       {children}

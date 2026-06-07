@@ -7,6 +7,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import ProfileEditor from "@/components/editors/profile-editor";
+import LinksEditor from "@/components/editors/links-editor";
 
 function EditorGroup({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
@@ -41,7 +42,9 @@ export default function EditorDrawer() {
           <EditorGroup title="Profile">
             <ProfileEditor />
           </EditorGroup>
-          <EditorGroup title="Links" />
+          <EditorGroup title="Links">
+            <LinksEditor />
+          </EditorGroup>
           <EditorGroup title="Theme" />
           <EditorGroup title="Layout" />
         </div>
