@@ -6,14 +6,17 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet";
+import ProfileEditor from "@/components/editors/profile-editor";
 
-function EditorGroup({ title }: { title: string }) {
+function EditorGroup({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
     <div className="py-3 border-b border-border">
-      <h3 className="text-sm font-medium text-foreground">{title}</h3>
-      <p className="text-xs text-muted-foreground mt-1">
-        Placeholder for {title.toLowerCase()} editing controls.
-      </p>
+      <h3 className="text-sm font-medium text-foreground mb-2">{title}</h3>
+      {children ?? (
+        <p className="text-xs text-muted-foreground">
+          Placeholder for {title.toLowerCase()} editing controls.
+        </p>
+      )}
     </div>
   );
 }
@@ -35,7 +38,9 @@ export default function EditorDrawer() {
           </SheetDescription>
         </SheetHeader>
         <div className="mt-4 space-y-1">
-          <EditorGroup title="Profile" />
+          <EditorGroup title="Profile">
+            <ProfileEditor />
+          </EditorGroup>
           <EditorGroup title="Links" />
           <EditorGroup title="Theme" />
           <EditorGroup title="Layout" />
